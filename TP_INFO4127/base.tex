@@ -1,0 +1,141 @@
+\documentclass[a4paper,13pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{color}
+\usepackage{graphicx}
+\pagecolor{white}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{geometry}
+\usepackage{lastpage} 
+\usepackage{fancyhdr}
+\lhead{Groupe xx}
+\rhead{INFO4127}
+\cfoot{\date{27 Décembre 2020}}
+\rfoot{\thepage/ \pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.2mm}
+\pagestyle{fancy}
+\geometry{hmargin=2.5cm,vmargin=1.5cm}
+\graphicspath{ {./images/} }
+
+\newcommand{\horrule}[1]{\noindent\rule{\linewidth}{#1}}
+
+\title{
+    \horrule{0.5pt} \\ [0.4cm]
+    \Huge Expose Groupe xx INFO 4127 TECHNIQUE D'OPTIMISATION\\ THEME: \\ MÉTHODE DES SUITES DE FIBONACCI\\
+    \horrule{2pt} \\[0.5cm]
+\begin{center}
+\includegraphics[width=100px]{univyde1}\\[15pt]
+\end{center}
+    \usefont{OT1}{bch}{b}{n}
+    \normalfont \normalsize \textsc{Université de Yaoundé I\\University of Yaounde I} \\ [25pt]
+    \normalfont \normalsize \textsc{Département D'Informatique\\Department of Computer Science} \\ [20pt]
+ }
+\author{
+    \normalfont                                 
+    OUSSAH SIGHA Sony Nelson \\[5pt]
+    EZEU GHOMSI Eugene Clotaire  \\[5pt]    
+    \normalsize
+}
+\date{27 Décembre 2020}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\addcontentsline{toc}{section}{INTRODUCTION}
+\tableofcontents
+
+
+\pagebreak
+
+
+
+
+\section*{INTRODUCTION}
+
+Avant d’entreprendre l’étude de problèmes d’optimisation, il est bon de bien définir ce
+qu’est un problème d’optimisation. Dans toute sa généralité, le problème d’optimisation
+consiste à déterminer la plus petite (grande) valeur possible qu’une fonction réelle $f$: E $\longrightarrow$ $\mathbb{R}$ nommée fonction objectif puisse prendre dans l’ensemble E nommé ensemble réalisable. Sous forme mathématique, ceci s’exprime (pour le cas de la minimisation)
+
+\begin{center}
+$ f^{*}(x) = \inf f(x) x \in E $ .
+\end{center}
+
+Il existe plusieurs techniques d'optimisations classifiés selon que certains problèmes a optimiser sont avec ou sans contraintes. Nous étudierons ici une méthode d'optimisation sans contrainte notamment la \textbf{Méthode de suite Fibonacci}.\\
+
+\section{MÉTHODE DE SUITE DE FIBONACCI}
+
+\subsection{Définition}
+
+La méthode de Fibonacci est une technique d'optimisation sans contraintes directe (recherche de la solution sans dériver $f$) appliqué au fonction monodimensionnelle strictement convexe. en d'autre terme la elle s'applique sur des fonctions a une variable  . L'approche de Fibonacci est une variante plus optimal de la méthode de dichotomie étant donnée que le choix du nouvel intervalle $[a^{k}; b^{k}]$ se fait suivant les nombres issue de la suite de Fibonacci, elle est aussi très adapté lorsque trouver la dérivée de la fonction à optimiser s'avère difficile.
+
+\subsection{Condition d'utilisation}
+
+Une méthode de recherche directe est une méthode qui repose uniquement sur l'évaluation de $f(x)$ sur une
+séquence $x_{1}, x_{2}, · · ·, x_{n}$ et comparer des valeurs afin de trouver un optimiseur de $f$.
+Les méthodes directes sont généralement appliquées dans les circonstances suivantes:
+\begin{itemize} 
+	\item la fonction $f(x)$ n'est pas différentiable;
+    \item les dérivées de $f$ sont compliquées à calculer ou même inexistantes;
+    \item la fonction a peu de variables;
+    \item l'emplacement d'une solution optimale est à peu près connu.   
+\end{itemize}.
+
+\subsection{Principe}
+
+De façon générale le principe de la méthode de suite de Fibonacci est basé sur le lemme suivant:
+Soit $f$: [a;b] $\longrightarrow$ $\mathbb{R}$ une fonction uni-modale et $x^{D}$, $x^{G}$ tels que a < $x^{G}$ < $x^{D}$ < b alors:
+
+\begin{list}{•}{ }
+\item$f(x^{G}) < f(x^{D}) \Longrightarrow \widehat{x} \in [a; x^{D}]$
+\item$f(x^{G}) > f(x^{D}) \Longrightarrow \widehat{x} \in [x^{G}; b]$
+\item$f(x^{G}) = f(x^{D}) \Longrightarrow \widehat{x} \in [x^{G}; x^{D}]$, $\widehat{x}$ représente l'optimum (minimum ou maximum) rechercher.
+\end{list}.
+
+La spécificité de cette méthode réside dans le choix des points $x^{G}$ et $x^{D}$. En effet ces points sont déterminés par les nombre de la suite de Fibonacci. Pour rappel la suite de Fibonacci se définit comme suit:
+	\[F_{0} = F_{1} = 1\]
+	\[F_{k+2} = F_{k+1} + F_{k}\]
+	\[\lim_{k\rightarrow\infty} \frac{F_{k+1}}{F_{k}} \longrightarrow \frac{1+\sqrt{5}}{2}\]
+les point $x^{G}$ et $x^{D}$ sont donc définis de manière suivante: 
+\[
+	x^{G}_{k} = a_{k} + \frac{F_{N-k}}{F_{N+2-k}}(b_{k} - a_{k}), x^{D}_{k} = a_{k} + \frac{F_{N+1-k}}{F_{N+2-k}}(b_{k} - a_{k})
+\]
+
+on utilise ensuite le lemme précédent pour trouver l'intervalle dans lequel le minimum peut se trouver et on s'arrête après un nombre N d'itérations.
+
+\subsection{Performance et Limites}
+
+Étant donnée que les nombres de la suite de Fibonacci croissent rapidement vers l'infini, les distances des intervalles $[a_{k}; b_{k}]$ tendent plus rapidement vers 0 ce qui fait de la méthode des suites de Fibonacci la méthode qui converge plus rapidement que toutes autre méthode d'optimisation sans contraintes mono-linéaire.
+La méthode des suites de Fibonacci requiert un nombre N d’itérations, ainsi lorsque N $\longrightarrow$ $\infty$ la complexité de l'algorithme s'en trouve lourdement impacté. La méthode de section dorée vient donc compléter celle des suites de Fibonacci en se basant sur le fait que \[\lim_{N\rightarrow\infty} \frac{F_{N+1}}{F_{N}} \longrightarrow \frac{1+\sqrt{5}}{2}\] en posant donc $\tau = \frac{1+\sqrt{5}}{2}$ (Le nombre d'or, d’où le nom de \textbf{section dorée}) on peut écrire \[\lim_{N\rightarrow\infty} \frac{F_{N}}{F_{N+1}} \longrightarrow \frac{1}{\tau}\]. Et donc les points $x^{G}$ et $x^{D}$ peuvent se réécrire indépendamment de N comme suit:
+
+\[
+	x^{G}_{k} = a_{k} + \frac{1}{\tau}(b_{k} - a_{k}), x^{D}_{k} = a_{k} + \frac{1}{\tau}(b_{k} - a_{k})
+\]
+
+\subsection{Algorithme}
+
+Lorsqu'on connaît le principe de la méthode , l'algorithme de Fibonacci se déduit facilement.
+
+\subsubsection{processus de résolution de la méthode de Fibonacci (simulateur)}
+
+\begin{list}{•}{ }
+
+\item choix du nombre d'itération N
+\item Division de l'intervalle initial $[a_{1}, b_{1}]$ en sous-intervalles uniformes dont la longueur est de  \[\frac{1}{F_{N}}(b_{1} - a_{1})\]
+le Point de grille $P_{i}, i = 1,..., F_{N - 1}$, dans l'intervalle peut être exprimé comme \[P_{i} = a_{1} + \frac{i}{F_{N}}(b_{1} - a_{1})\]
+\item Dans la première itération, prenons le point de grille $F_{N - 2}$-ème à partir de la gauche comme $x_{1}^{G}$ et le $F_{N - 1}$-ème point de grille à partir de la gauche comme $x_{1}^{D}$. ils sont:
+\[x_{1}^{G} = F_{N - 2}/F_N(b_{1} - a_{1}) + a_{1}\]  et \[x_{1}^{D} = F_{N - 1}/F_N(b_{1} - a_{1}) + a_{1}\]
+Comparons les valeurs de fonction à ces deux points et décidons $a_{2}$ et $b_{2}$. Puis Répétons le processus avec $N = N - 1$ pour obtenir $x_{2}^{G}, x_{2}^{D}$...
+    
+\end{list}
+
+\subsubsection{processus de résolution de la méthode de Fibonacci (optimiseur)}
+
+
+\end{document}

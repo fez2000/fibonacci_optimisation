@@ -138,6 +138,9 @@
       
       document.querySelector("#output").innerHTML = '';
       FIBSearch(f, parseFloat(a), parseFloat(b),parseFloat(tolerance));
+      document.querySelector("#output").innerHTML +=  `le point median de l'intervalle <b>${mdpt}</b> et <b>f(midpoint) = ${fkeep}</b>. 
+
+      le point max est <b> x  =  ${xkeep}</b> `;
     }
 
     function fib(nbr) {
@@ -234,7 +237,7 @@
       N = j;
       x1 = a+(fib(N-2)/fib(N))*(b-a);
       x2 = a+(fib(N-1)/fib(N))*(b-a);
-      document.querySelector("#output").innerHTML = `L'intervalle [a,b] est [ ${a}, ${b}] et le nombre d'iteration  ${N}. les deux premiers points a tester sont  x1= ${x1} and x2 = ${x2}.`;
+      document.querySelector("#output").innerHTML = `L'intervalle [a,b] est <b>[ ${a}, ${b}]</b> et le nombre d'iteration  <b>${N}</b>. les deux premiers points a tester sont  <b>x1= ${x1}</b> and <b>x2 = ${x2}</b>.`;
       
       iterate(f,a,b,N,x1,x2);
     }

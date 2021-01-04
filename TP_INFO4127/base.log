@@ -1,0 +1,178 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (INITEX)  28 DEC 2020 09:36
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**base.tex
+(./base.tex
+! Undefined control sequence.
+l.1 \documentclass
+                  [a4paper,13pt]{article}
+? 
+! Undefined control sequence.
+l.2 \usepackage
+               [utf8]{inputenc}
+? 
+! Undefined control sequence.
+l.3 \usepackage
+               [T1]{fontenc}
+? 
+! Undefined control sequence.
+l.4 \usepackage
+               [french]{babel}
+? 
+! Undefined control sequence.
+l.5 \usepackage
+               {color}
+? 
+! Undefined control sequence.
+l.6 \usepackage
+               {graphicx}
+? 
+! Undefined control sequence.
+l.7 \pagecolor
+              {white}
+? 
+! Undefined control sequence.
+l.8 \usepackage
+               {lmodern}
+? 
+! Undefined control sequence.
+l.9 \usepackage
+               {amsmath}
+? 
+! Undefined control sequence.
+l.10 \usepackage
+                {amssymb}
+? 
+! Undefined control sequence.
+l.11 \usepackage
+                {mathrsfs}
+? 
+! Undefined control sequence.
+l.12 \usepackage
+                {geometry}
+? 
+! Undefined control sequence.
+l.13 \usepackage
+                {lastpage}
+? 
+! Undefined control sequence.
+l.14 \usepackage
+                {fancyhdr}
+? 
+! Undefined control sequence.
+l.15 \lhead
+           {Grp xx}
+? 
+! Undefined control sequence.
+l.16 \rhead
+           {INFO4127}
+? 
+! Undefined control sequence.
+l.17 \cfoot
+           {\today}
+? 
+! Undefined control sequence.
+l.17 \cfoot{\today
+                  }
+? 
+! Undefined control sequence.
+l.18 \rfoot
+           {\thepage/ \pageref{LastPage}}
+? 
+! Undefined control sequence.
+l.18 \rfoot{\thepage
+                    / \pageref{LastPage}}
+? 
+! Undefined control sequence.
+l.18 \rfoot{\thepage/ \pageref
+                              {LastPage}}
+? 
+! Undefined control sequence.
+l.19 \renewcommand
+                  {\footrulewidth}{0.2mm}
+? 
+! Undefined control sequence.
+l.19 \renewcommand{\footrulewidth
+                                 }{0.2mm}
+? 
+! Undefined control sequence.
+l.20 \pagestyle
+               {fancy}
+? 
+! Undefined control sequence.
+l.21 \geometry
+              {hmargin=2.5cm,vmargin=1.5cm}
+? 
+! Undefined control sequence.
+l.22 \graphicspath
+                  { {./images/} }
+? 
+! Undefined control sequence.
+l.24 \newcommand
+                {\horrule}[1]{\noindent\rule{\linewidth}{#1}}
+? 
+! Undefined control sequence.
+l.24 \newcommand{\horrule
+                         }[1]{\noindent\rule{\linewidth}{#1}}
+? 
+! Undefined control sequence.
+l.24 \newcommand{\horrule}[1]{\noindent\rule
+                                            {\linewidth}{#1}}
+? 
+! Undefined control sequence.
+l.24 ...and{\horrule}[1]{\noindent\rule{\linewidth
+                                                  }{#1}}
+? 
+! Undefined control sequence.
+l.26 \title
+           {
+? 
+! Undefined control sequence.
+l.27     \horrule
+                 {0.5pt} \\ [0.4cm]
+? 
+! Undefined control sequence.
+l.27     \horrule{0.5pt} \\
+                            [0.4cm]
+? 
+! Undefined control sequence.
+l.28     \Huge
+               Expose Groupe xx INFO 4127 TECHNIQUE D'OPTIMISATION\\ THEME: ...
+
+? 
+! Undefined control sequence.
+l.28 ...pe xx INFO 4127 TECHNIQUE D'OPTIMISATION\\
+                                                   THEME: \\ M^^c3^^89THODE ...
+
+? 
+! Undefined control sequence.
+l.28 ... 4127 TECHNIQUE D'OPTIMISATION\\ THEME: \\
+                                                   M^^c3^^89THODE DES SUITES...
+
+? 
+! Undefined control sequence.
+l.28 ...\ M^^c3^^89THODE DES SUITES DE FIBONACCI\\
+                                                  
+? 
+! Undefined control sequence.
+l.29     \horrule
+                 {2pt} \\[0.5cm]
+? 
+! Undefined control sequence.
+l.29     \horrule{2pt} \\
+                         [0.5cm]
+? 
+! Undefined control sequence.
+l.30 \begin
+           {center}
+? 
+! Undefined control sequence.
+l.31 \includegraphics
+                     [width=100px]{univyde1}\\[15pt]
+? 
+! Undefined control sequence.
+l.31 \includegraphics[width=100px]{univyde1}\\
+                                              [15pt]
+? 
+[0] )
+Output written on base.dvi (1 page, 128 bytes).
