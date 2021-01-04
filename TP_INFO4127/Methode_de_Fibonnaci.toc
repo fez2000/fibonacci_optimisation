@@ -1,14 +1,16 @@
 \babel@toc {english}{}
-\contentsline {section}{INTRODUCTION}{2}%
-\contentsline {section}{CONCLUSION}{2}%
-\contentsline {section}{\numberline {1}MÉTHODE DE SUITE DE FIBONACCI}{3}%
-\contentsline {subsection}{\numberline {1.1}Définition}{3}%
-\contentsline {subsection}{\numberline {1.2}Condition d'utilisation}{3}%
-\contentsline {subsection}{\numberline {1.3}Principe}{3}%
-\contentsline {subsection}{\numberline {1.4}Performance et Limites}{4}%
-\contentsline {subsection}{\numberline {1.5}Algorithme}{4}%
-\contentsline {subsubsection}{\numberline {1.5.1}Simulateur ou évaluation de la fonction aux point ak et bk}{4}%
-\contentsline {subsubsection}{\numberline {1.5.2}Optimiseur ou choix des points ak+1 et bk+1}{4}%
-\contentsline {section}{\numberline {2}CHOIX DES FONCTION POUR L’IMPLÉMENTATION DE LA MÉTHODE DES SUITES DE FIBONACCI}{5}%
-\contentsline {subsection}{\numberline {2.1}Vérification de L'hypothèse d'Uni-modalité}{5}%
-\contentsline {section}{\numberline {3}IMPLÉMENTATION DE LA MÉTHODE DES SUITES DE FIBONACCI}{6}%
+\contentsline {section}{INTRODUCTION}{2}% 
+\contentsline {section}{CONCLUSION}{2}% 
+\contentsline {section}{\numberline {1}M\IeC {\'E}THODE DE SUITE DE FIBONACCI}{3}% 
+\contentsline {subsection}{\numberline {1.1}D\IeC {\'e}finition}{3}% 
+\contentsline {subsection}{\numberline {1.2}Condition d'utilisation}{3}% 
+\contentsline {subsection}{\numberline {1.3}Principe}{3}% 
+\contentsline {subsection}{\numberline {1.4}Performance et Limites}{4}% 
+\contentsline {subsection}{\numberline {1.5}Algorithme}{4}% 
+\contentsline {subsubsection}{\numberline {1.5.1}Simulateur ou \IeC {\'e}valuation de la fonction aux point ak et bk}{4}% 
+\contentsline {subsubsection}{\numberline {1.5.2}Optimiseur ou choix des points ak+1 et bk+1}{4}% 
+\contentsline {section}{\numberline {2}CHOIX DES FONCTION POUR L\IeC {\textquoteright }IMPL\IeC {\'E}MENTATION DE LA M\IeC {\'E}THODE DES SUITES DE FIBONACCI}{5}% 
+\contentsline {subsection}{\numberline {2.1}V\IeC {\'e}rification de L'hypoth\IeC {\`e}se d'Uni-modalit\IeC {\'e}}{5}% 
+\contentsline {section}{\numberline {3}IMPL\IeC {\'E}MENTATION DE LA M\IeC {\'E}THODE DES SUITES DE FIBONACCI}{5}% 
+\contentsline {subsection}{\numberline {3.1}Pr\IeC {\'e}sentation du Code source}{5}% 
+\contentsline {subsection}{\numberline {3.2}Presentation du logiciel}{7}% 
