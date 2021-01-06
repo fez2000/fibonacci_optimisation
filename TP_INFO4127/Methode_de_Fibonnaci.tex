@@ -83,7 +83,7 @@ breaklines=true,
 showtabs=false,
 captionpos=b
 }
-\lhead{Groupe xx}
+\lhead{Groupe 11}
 \rhead{INFO4127}
 \cfoot{\date{27 Décembre 2020}}
 \rfoot{\thepage/ \pageref{LastPage}}
@@ -96,7 +96,7 @@ captionpos=b
 
 \title{
     \horrule{0.5pt} \\ [0.4cm]
-    \Huge Expose Groupe xx INFO 4127 TECHNIQUE D'OPTIMISATION\\ THEME: \\ MÉTHODE DES SUITES DE FIBONACCI\\
+    \Huge Exposé Groupe 11 INFO 4127 TECHNIQUE D'OPTIMISATION\\ THÈME: \\ MÉTHODE DES SUITES DE FIBONACCI\\
     \horrule{2pt} \\[0.5cm]
 \begin{center}
 \includegraphics[width=100px]{univyde1}\\[15pt]
@@ -104,10 +104,12 @@ captionpos=b
     \usefont{OT1}{bch}{b}{n}
     \normalfont \normalsize \textsc{Université de Yaoundé I\\University of Yaounde I} \\ [25pt]
     \normalfont \normalsize \textsc{Département D'Informatique\\Department of Computer Science} \\ [20pt]
+    \normalfont \normalsize \textsc{Filière: INFORMATIQUE FONDAMENTALE\\Option: Data Science} \\ [20pt]
  }
 \author{
-    \normalfont                                 
+    \normalfont Documents rédige par les étudiants:\\\\                                
     OUSSAH SIGHA Sony Nelson Matricule 19W2631 \\[5pt]
+    et\\
     FEZEU GHOMSI Eugene Clotaire Matricule 17Q2864 \\[5pt] 
     \normalsize
 }
@@ -208,9 +210,9 @@ Lorsqu'on connaît le principe de la méthode , l'algorithme de Fibonacci se dé
 \item itérations : \[x_{k}^{G} = a_{k} + \frac{F_{N-k}}{F_{N+2-k}}(b_{k} - a_{k})\]  et \[x_{k}^{D} = a_{k} + \frac{F_{N+1-k}}{F_{N+2-k}}(b_{k}-a_{k})\]
 \item Si:
 \begin{itemize}
-\item[-] $f(x_{k}^{G}) < f(x_{k}^{D}) \Longrightarrow a_{k+1} = a_{k} et b_{k+1} = x_{k}^{D}$
-\item[-] $f(x_{k}^{G}) > f(x_{k}^{D}) \Longrightarrow a_{k+1} = x_{k}^{G} et b_{k+1} = b_{k}$
-\item[-] $f(x_{k}^{G}) = f(x_{k}^{D}) \Longrightarrow a_{k+2} = x_{k}^{G} et b_{k+2} = x_{k}^{D}$
+\item[-] $f(x_{k}^{G}) < f(x_{k}^{D}) \Longrightarrow a_{k+1} = a_{k}$ et $b_{k+1} = x_{k}^{D}$
+\item[-] $f(x_{k}^{G}) > f(x_{k}^{D}) \Longrightarrow a_{k+1} = x_{k}^{G}$ et $b_{k+1} = b_{k}$
+\item[-] $f(x_{k}^{G}) = f(x_{k}^{D}) \Longrightarrow a_{k+1} = x_{k}^{G}$ et $b_{k+1} = x_{k}^{D}$
 \end{itemize}
 
 \item arrêt : après N itérations.
@@ -287,7 +289,7 @@ function fib(n) {
 	const preCalculated = Array(n + 1).fill(0)
 	preCalculated[1] = 1
 
-	for (var i = 0; i <= n; i++) {
+	for (var i = 0; i <= n - 2; i++) {
 		preCalculated[i + 2] = preCalculated[i + 1] + preCalculated[i]
 	}
 

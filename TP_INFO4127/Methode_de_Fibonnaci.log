@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.12.24)  4 JAN 2021 16:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.12.24)  5 JAN 2021 21:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -282,19 +282,19 @@ LaTeX Warning: Unused global option(s):
 (./Methode_de_Fibonnaci.aux)
 \openout1 = `Methode_de_Fibonnaci.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 119.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 121.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -394,59 +394,59 @@ e
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 119.
+(lastpage)             ! on input line 121.
 \c@lstlisting=\count119
 <./images/univyde1.png, id=1, 278.54062pt x 361.35pt>
 File: ./images/univyde1.png Graphic file (type png)
 <use ./images/univyde1.png>
-Package pdftex.def Info: ./images/univyde1.png  used on input line 121.
+Package pdftex.def Info: ./images/univyde1.png  used on input line 123.
 (pdftex.def)             Requested size: 100.37537pt x 130.2127pt.
-LaTeX Font Info:    Try loading font information for OT1+bch on input line 121.
+LaTeX Font Info:    Try loading font information for OT1+bch on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 121.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 123.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 121.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 123.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 121
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 123
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 121
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 123
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 121.
+(Font)              <12> on input line 123.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 121.
+(Font)              <8> on input line 123.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 121.
-LaTeX Font Info:    Try loading font information for U+msa on input line 121.
+(Font)              <6> on input line 123.
+LaTeX Font Info:    Try loading font information for U+msa on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 121.
+LaTeX Font Info:    Try loading font information for U+msb on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 121.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -465,71 +465,71 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \openout3 = `Methode_de_Fibonnaci.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 157.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 159.
 
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 157.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 159.
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 171.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 173.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 244--246
+Underfull \hbox (badness 10000) in paragraph at lines 246--248
 
  []
 
 
-Overfull \hbox (1.7771pt too wide) in paragraph at lines 252--252
+Overfull \hbox (1.7771pt too wide) in paragraph at lines 254--254
 []\T1/lmr/bx/n/14.4 CHOIX DES FONC-TION POUR L'IMPLÉMENTATION DE
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 285.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 287.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <8> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 286.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 288.
  [5] [6]
 <./images/c.png, id=45, 1290.8225pt x 667.49374pt>
 File: ./images/c.png Graphic file (type png)
 <use ./images/c.png>
-Package pdftex.def Info: ./images/c.png  used on input line 397.
+Package pdftex.def Info: ./images/c.png  used on input line 399.
 (pdftex.def)             Requested size: 1419.90916pt x 734.2454pt.
  [7 <./images/c.png>]
 
@@ -538,7 +538,7 @@ AED: lastpage setting LastPage
 Here is how much of TeX's memory you used:
  5826 strings out of 492615
  77679 string characters out of 6131389
- 534714 words of memory out of 5000000
+ 534831 words of memory out of 5000000
  9581 multiletter control sequences out of 15000+600000
  69630 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -562,7 +562,7 @@ fb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on Methode_de_Fibonnaci.pdf (8 pages, 439718 bytes).
+Output written on Methode_de_Fibonnaci.pdf (8 pages, 442607 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  94 compressed objects within 1 object stream

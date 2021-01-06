@@ -1,75 +1,99 @@
 <html lang="en">
 
 <head>
-  <title>Plotting functions in JavaScript using the function plot library</title>
-  <meta charset="utf-8" />
-  <script src="./d3.v3.min.js"></script>
-  <script src="./function-plot.js"></script>
-  <style>
-    h2{
-      text-align: center;
-    }
-    .layer{
-      width: 90%;
-      margin-right: auto;
-      margin-left: auto;
-    }
-    
-    section, #output2 {
-      border:4px solid grey;
-      border-radius:15px;
-      box-shadow: 5px 5px 5px grey;
-      float:left;
-      
-      padding: 20px;
-      margin:10px;
-    }
-    #output2{
-      height: auto;
-    }
-    #plotSettings,#fiboSettings {
-      width:160px;
-    }
-    
-    #plot {
-      width:550px;
-    }
-  </style>
- 
+    <title>Plotting functions in JavaScript using the function plot library</title>
+    <meta charset="utf-8" />
+    <script src="./d3.v3.min.js"></script>
+    <script src="./function-plot.js"></script>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        
+        .layer {
+            width: 95%;
+            display: flow-root;
+            padding: 20px;
+        }
+        
+        input {
+            display: flex;
+        }
+        
+        strong {
+            color: rgb(45, 54, 177);
+        }
+        
+        section,
+        #output2 {
+            border: 4px solid grey;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px grey;
+            float: left;
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        #output2 {
+            height: auto;
+        }
+        
+        #plotSettings,
+        #fiboSettings {
+            width: auto;
+            min-height: 150px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+        
+        #plotSettings::-webkit-scrollbar,
+        #fiboSettings::-webkit-scrollbar {
+            display: none;
+        }
+        
+        #plot {
+            width: auto;
+        }
+    </style>
+
 </head>
 
 <body onload="plot();">
-  <h2>Methode de fibonaci</h2>
-  <div class="layer">
-  <section id="plotSettings">
-    <label for="xMin">xMin: </label>  <input type=number id="xMin" value=-5 step=0.5 oninput="plot();">
-    <p></p>
-    <label for="xMin">xMax: </label>  <input type=number id="xMax" value=20 step=0.5 oninput="plot();">
-
-    <p></p>
-    <label for="yMin">yMin: </label>  <input type=number id="yMin" value=-6 step=0.5 oninput="plot();">
-    <p></p>
-    <label for="yMax">yMax: </label> <input type=number id="yMax" value=6 step=0.5 oninput="plot();">
-    <p></p>
-    <label for="color">Color: </label>  <input type=color id="color" onchange="plot();">
-    <p></p>
-    <label for="function">Function a optimiser: </label>
-    <input id="function" type="text" value="-x^2 + 21.6x + 3" onchange="plot();">
-    <p></p>
-    <button onclick="plot();">Optimiser</button>
-
-  </section>
-  <section id="fiboSettings" >
-    <label for="a">a: </label>  <input type=number id="a" value=0 step=0.5 oninput="plot();">
-    <p></p>
-    <label for="b">b: </label>  <input type=number id="b" value=20 step=0.5 oninput="plot();">
-
-    <p></p>
-    <label for="tolerance">tolerance: </label>  <input type=number id="tolerance" value=0.001 step=0.05 oninput="plot();">
-
-    <p></p>
-    <label for="defaultF">Fonctions: </label>
-    <select id="defaultF" oninput="plot2(event)">
+    <h2>Methode de fibonaci</h2>
+    <div class="layer">
+        <section id="plotSettings">
+            <label for="xMin">xMin: </label>
+            <input type=number id="xMin" value=-10 step=0.1 oninput="plot();">
+            </br>
+            <label for="xMin">xMax: </label>
+            <input type=number id="xMax" value=10 step=0.1 oninput="plot();">
+            </br>
+            <label for="yMin">yMin: </label>
+            <input type=number id="yMin" value=-10 step=0.1 oninput="plot();">
+            </br>
+            <label for="yMax">yMax: </label>
+            <input type=number id="yMax" value=10 step=0.1 oninput="plot();">
+            </br>
+            <label for="color">Color: </label>
+            <input type=color id="color" onchange="plot();">
+            </br>
+            <label for="function">Function a optimiser: </label>
+            <input id="function" type="text" value="exp(x*(x-1))" onchange="plot();">
+            </br>
+            <button onclick="plot();">Optimiser</button>
+        </section>
+        <section id="fiboSettings">
+            <label for="a">a: </label>
+            <input type=number id="a" value=-1 step=0.1 oninput="plot();">
+            </br>
+            <label for="b">b: </label>
+            <input type=number id="b" value=1 step=0.1 oninput="plot();">
+            </br>
+            <label for="b">Nombres d'iterations: </label>
+            <input type=number id="N" value=5 step=1 oninput="plot();">
+            </br>
+            <label for="defaultF">Fonctions: </label>
+            <select id="defaultF" oninput="plot2(event)">
       <option value="exp(x*(x-1))">
         exp(x*(x-1))
       </option>
@@ -77,171 +101,177 @@
         x^2*(1-cos(x))
       </option> 
     </select>
-  </section>
-  <section id="plot">
-    <div id="myFunction"></div>
-  </section>
-  <section id="output">
-  
-  </section>
-  <div id="output2">
-  
-  </div>
-  </div>
-  <script>
-    var datas = {
-      "exp(x*(x-1))": {
-        a: "-1",
-        b: "1"
-      },
-      "x^2*(1-cos(x))": {
-        a: "-1",
-        b: "0.5"
-      }
-    }
-    var parameters = {
-      target: '#myFunction',
-      data: [{
-        fn: '-x^2 + 21.6x + 3', 
-        color: 'red'
-     }],
-      grid: true,
-      yAxis: {domain: [-1, 1]},
-      xAxis: {domain: [0, 2*Math.PI]}
-    };
-    var cos = Math.cos;
-    var sin = Math.sin;
-    function plot2(e)
-    {
-      document.querySelector("#a").value = datas[e.target.value].a;
-      document.querySelector("#b").value = datas[e.target.value].b;
-      document.querySelector("#function").value = e.target.value;
-      plot()
-    }
-    function plot() {
-      var f = document.querySelector("#function").value;
-      var xMin = document.querySelector("#xMin").value;
-      var xMax = document.querySelector("#xMax").value;
-      var yMin = document.querySelector("#yMin").value;
-      var yMax = document.querySelector("#yMax").value;
-      var a = document.querySelector("#a").value;
-      var b = document.querySelector("#b").value;
-      var tolerance = document.querySelector("#tolerance").value;
-      var color = document.querySelector("#color").value;
-      
-      parameters.data[0].fn = f;
-      parameters.xAxis.domain = [xMin, xMax];
-      parameters.yAxis.domain = [yMin, yMax];
-      parameters.data[0].color = color;
-      
-      functionPlot(parameters);
-      
-      document.querySelector("#output").innerHTML = '';
-      FIBSearch(f, parseFloat(a), parseFloat(b),parseFloat(tolerance));
-      document.querySelector("#output").innerHTML +=  `le point median de l'intervalle <b>${mdpt}</b> et <b>f(midpoint) = ${fkeep}</b>. 
+        </section>
+        <section id="plot">
+            <div id="myFunction"></div>
+        </section>
+        <section id="output">
 
-      le point max est <b> x  =  ${xkeep}</b> `;
-    }
+        </section>
+        <div id="output2">
 
-    function fib(nbr) {
-      var n1 = 1;
-      var n2 = 1;
-      var somme = 0;
-
-      for(let i = 2; i <= nbr; i++){
-        //somme des deux derniers nombres
-        somme = n1 + n2; 
-        //assigner la dernière valeur à la première
-        n1 = n2; 
-        //attribuer la somme au dernier
-        n2 = somme; 
-      }
-
-      return nbr ? n2 : n1;
-    }
-    function evalf(f,x){
-      const datum = {
-        fn: f
-      }
-      var scope = {
-        
-        x
-      }
-      return functionPlot.$eval.builtIn(datum, 'fn', scope);
-    
-    }
-    var mdpt,fkeep,xkeep;
-    function iterate(f,a,b, N,x1,x2){
-      var x1n = [],x2n = [],an = [],bn = [],i,fx1=[],fx2 = [],j,fmid;
-
-      
-     i = 1;
-     x1n[1] = x1;
-     x2n[1] = x2;
-     an[1] = a;
-     bn[1] = b;
-     i = 1;
-     document.querySelector("#output2").innerHTML = `<table><thead><tr><th> x(1) </th><th>x(2)</th><th>f(x1)</th> <th>f(x2)</th> <th>Interval</th>  </tr></thead><tbody id="outputtable"></tbody></table> `
-    for(var j=1; j < N + 1; j++){
-      
-      fx1[i] = evalf(f,x1n[i]);
-      fx2[i] = evalf(f,x2n[i]);
-      if (fx1[i]<=fx2[i]){
-        an[i+1] = x1n[i];
-        bn[i+1] = bn[i];
-        x1n[i+1] = x2n[i];
-        x2n[i+1] = an[i+1]+(fib(N-i-1)/fib(N-i))*(bn[i+1]-an[i+1]);
-
-      }else{
-        an[i+1] = an[i];
-        bn[i+1] = x2n[i];
-        x2n[i+1] = x1n[i];
-        x1n[i+1] = an[i+1]+(fib(N-i-2)/fib(N-i))*(bn[i+1]-an[i+1]);
-        
-      }
-      i = i+1;
-        
-        document.querySelector("#outputtable").innerHTML += `<tr><td>${x1n[i]}</td><td>${x2n[i]}</td><td>${fx1[i-1]}</td><td>${fx2[i-1]}</td><td>[${an[i]}, ${bn[i]}]</td></tr>` 
-        mdpt = (an[i] + bn[i])/2;
-        if((i+2)==N){
-          if(evalf(f, an[i]) > evalf(f,bn[i]) || evalf(f, an[i]) > evalf(f,mdpt)){
-            fkeep = evalf(f,an[i]); 
-            xkeep = an[i];
-          }else{
-            if(evalf(f,bn[i]) > evalf(f,mdpt)){
-              fkeep = evalf(f,bn[i]); 
-              xkeep = evalf(f,bn[i]);
-            }else{
-              fkeep =  evalf(f,mdpt); 
-              xkeep = mdpt;
-            } 
-          }
+        </div>
+    </div>
+    <script>
+        var datas = {
+            "exp(x*(x-1))": {
+                a: "-1",
+                b: "1"
+            },
+            "x^2*(1-cos(x))": {
+                a: "-1",
+                b: "0.5"
+            }
         }
-    }
-   
-    
-  }
-    
-    function FIBSearch(f,a,b,T){
-      var L, M, j, C, x1, x2, N, val;
-      L = (b-a)/T;
-      M = Math.round(L);
-      j=0;
-      do{
-        C = fib(j);
-        if( C<L ){
-          j = j+1;
-          
+        var parameters = {
+            target: '#myFunction',
+            data: [{
+                fn: '-x^2 + 21.6x + 3',
+                color: 'red'
+            }],
+            grid: true,
+            yAxis: {
+                domain: [-1, 1]
+            },
+            xAxis: {
+                domain: [0, 2 * Math.PI]
+            }
+        };
+        var cos = Math.cos;
+        var sin = Math.sin;
+
+        function plot2(e) {
+            document.querySelector("#a").value = datas[e.target.value].a;
+            document.querySelector("#b").value = datas[e.target.value].b;
+            document.querySelector("#function").value = e.target.value;
+            plot()
         }
-      }while(C<L);
-      N = j;
-      x1 = a+(fib(N-2)/fib(N))*(b-a);
-      x2 = a+(fib(N-1)/fib(N))*(b-a);
-      document.querySelector("#output").innerHTML = `L'intervalle [a,b] est <b>[ ${a}, ${b}]</b> et le nombre d'iteration  <b>${N}</b>. les deux premiers points a tester sont  <b>x1= ${x1}</b> and <b>x2 = ${x2}</b>.`;
-      
-      iterate(f,a,b,N,x1,x2);
-    }
-  </script>
+
+        function plot() {
+            var f = document.querySelector("#function").value;
+            var xMin = document.querySelector("#xMin").value;
+            var xMax = document.querySelector("#xMax").value;
+            var yMin = document.querySelector("#yMin").value;
+            var yMax = document.querySelector("#yMax").value;
+            var a = document.querySelector("#a").value;
+            var b = document.querySelector("#b").value;
+            var N = document.querySelector("#N").value;
+            var color = document.querySelector("#color").value;
+
+            parameters.data[0].fn = f;
+            parameters.xAxis.domain = [xMin, xMax];
+            parameters.yAxis.domain = [yMin, yMax];
+            parameters.data[0].color = color;
+
+            functionPlot(parameters);
+
+            document.querySelector("#output").innerHTML = '';
+            FIBSearch(f, parseFloat(a), parseFloat(b), parseInt(N));
+            document.querySelector("#output").innerHTML += `le point median de l'intervalle <strong>${mdpt}</strong> et <strong>f(midpoint) = ${fkeep}</strong>. 
+
+      le point max est <strong> x  =  ${xkeep}</strong> `;
+        }
+
+        function fib(n) {
+            const precedentFiboNums = Array(n + 1).fill(0);
+
+            precedentFiboNums[1] = 1
+
+            for (let i = 0; i <= n - 2; i++) {
+                precedentFiboNums[i + 2] = precedentFiboNums[i + 1] + precedentFiboNums[i]
+            }
+
+            return precedentFiboNums[n]
+        }
+
+        function evalf(f, x) {
+            const datum = {
+                fn: f
+            }
+            var scope = {
+                x
+            }
+            return functionPlot.$eval.builtIn(datum, 'fn', scope);
+
+        }
+        var mdpt, fkeep, xkeep;
+
+        function iterate(f, a, b, N, x1, x2) {
+            var x1n = [],
+                x2n = [],
+                an = [],
+                bn = [],
+                i, fx1 = [],
+                fx2 = [],
+                j, fmid;
+
+            i = 1;
+            x1n[1] = x1;
+            x2n[1] = x2;
+            an[1] = a;
+            bn[1] = b;
+            document.querySelector("#output2").innerHTML = `<table><thead><tr><th> x(1) </th><th>x(2)</th><th>f(x1)</th> <th>f(x2)</th> <th>Interval</th>  </tr></thead><tbody id="outputtable"></tbody></table> `
+            for (var j = 1; j < N + 1; j++) {
+
+                fx1[i] = evalf(f, x1n[i]);
+                fx2[i] = evalf(f, x2n[i]);
+                if (fx1[i] < fx2[i]) {
+                    an[i + 1] = x1n[i];
+                    bn[i + 1] = bn[i];
+                    x2n[i + 1] = x1n[i];
+                    x1n[i + 1] = an[i + 1] + (fib(N - i - 2) / fib(N - i)) * (bn[i + 1] - an[i + 1]);
+
+                } else if (fx1[i] > fx2[i]) {
+                    an[i + 1] = an[i];
+                    bn[i + 1] = x2n[i];
+                    x1n[i + 1] = x2n[i];
+                    x2n[i + 1] = an[i + 1] + (fib(N - i - 1) / fib(N - i)) * (bn[i + 1] - an[i + 1]);
+
+                } else if (fx1[i] = fx2[i]) {
+                    an[i + 1] = x1n[i];
+                    bn[i + 1] = x2n[i];
+                }
+
+                i = i + 1;
+
+                document.querySelector("#outputtable").innerHTML += `<tr><td>${x1n[i]}</td><td>${x2n[i]}</td><td>${fx1[i-1]}</td><td>${fx2[i-1]}</td><td>[${an[i]}, ${bn[i]}]</td></tr>`
+                mdpt = (an[i] + bn[i]) / 2;
+                if ((i + 2) == N) {
+                    if (evalf(f, an[i]) > evalf(f, bn[i]) || evalf(f, an[i]) > evalf(f, mdpt)) {
+                        fkeep = evalf(f, an[i]);
+                        xkeep = an[i];
+                    } else {
+                        if (evalf(f, bn[i]) > evalf(f, mdpt)) {
+                            fkeep = evalf(f, bn[i]);
+                            xkeep = evalf(f, bn[i]);
+                        } else {
+                            fkeep = evalf(f, mdpt);
+                            xkeep = mdpt;
+                        }
+                    }
+                }
+            }
+        }
+
+        function FIBSearch(f, a, b, N) {
+            var L, M, j, C, x1, x2, N, val;
+            L = (b - a);
+            /*M = Math.round(L);
+            j = 0;
+            do {
+                C = fib(j);
+                if (C < L) {
+                    j = j + 1;
+                }
+            } while (C < L);
+            N = j; */
+            x1 = a + (fib(N - 2) / fib(N)) * L;
+            x2 = a + (fib(N - 1) / fib(N)) * L;
+            document.querySelector("#output").innerHTML = `L'intervalle [a,b] est <strong>[ ${a}, ${b}]</strong> et le nombre d'iteration  <strong>${N}</strong>. les deux premiers points a tester sont  <strong>x1= ${x1}</strong> and <strong>x2 = ${x2}</strong>.`;
+
+            iterate(f, a, b, N, x1, x2);
+        }
+    </script>
 </body>
 
 </html>
